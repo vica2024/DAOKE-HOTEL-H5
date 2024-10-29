@@ -1,0 +1,18 @@
+.mobile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f0f0; /* 背景色 */
+  }
+  
+  .mobile-frame {
+    width: 375px; /* 手机宽度 */
+    height: 667px; /* 手机高度 */
+    border: 16px solid #000; /* 模拟边框 */
+    border-radius: 36px; /* 圆角 */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* 阴影 */
+    overflow: hidden; /* 隐藏超出部分 */
+  }
+  
