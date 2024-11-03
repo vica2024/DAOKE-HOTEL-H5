@@ -1,8 +1,8 @@
 {
-  "name": "Daoke-hotel-h5",
+  "name": "doake-hotel",
   "private": true,
   "version": "0.1.0",
-  "type": "application",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -13,9 +13,11 @@
     "@nutui/icons-react": "^1.0.1",
     "@nutui/nutui-react": "^2.4.0",
     "framer-motion": "^11.11.9",
+    "i18next": "^23.16.4",
     "postcss-cli": "^11.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-i18next": "^15.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
