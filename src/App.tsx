@@ -1,41 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import '@/assets/js/iconfont.js';
 import Layout from '@/components/layout/Mobile';
 import AnimatedPage from '@/components/layout/AnimatedPage'; // 动画页面组件
 import HomePage from '@/pages/Home/Index'; // 主页
-import DiscoverPage from '@/pages/DiscoverPage'; //发现
-import ProfilePage from '@/pages/ProfilePage'; // 个人
+import DiscoverPage from '@/pages/Discover/index'; // 发现
+import ProfilePage from '@/pages/Profile/index'; // 个人
 import { AnimatePresence } from 'framer-motion'; // 动画管理
 
-const App: React.FC = () => {
-  const [page, setPage] = useState('home'); // 用于跟踪当前页面
+interface AppConfigProps {
+  index: number;
+  height: number;
+}
 
-  const renderPage = () => {
-    switch (page) {
-      case 'home':
-        return <HomePage />;
-      case 'discover':
-        return <DiscoverPage />;
-      case 'profile':
-      default:
-        return <ProfilePage />;
-    }
+const App: React.FC = () => {
+  const [appConfig, setAppConfig] = useState<AppConfigProps>({ index: 0, height: 0 });
+  const pages: any = {
+    0: <HomePage data={appConfig} />,
+    1: <DiscoverPage data={appConfig} />,
+    2: <ProfilePage data={appConfig} />
   };
 
-  const activePage = (index: number) => {
-    const pageMatch = [
-      { page: 'home' },
-      { page: 'discover' },
-      { page: 'profile' }
-    ];
-    setPage(pageMatch[index].page);
-  }
+  const renderPage = () => pages[appConfig.index];
+
+  const activePage = (params: AppConfigProps) => {
+    setAppConfig(params);
+  };
+
+  useEffect(() => {
+   // console.log(appConfig);
+  }, [appConfig]); // 监测 appConfig 的变化
 
   return (
     <Layout onRenderPage={activePage}>
       {/* 使用 AnimatePresence 包裹页面切换 */}
       <AnimatePresence mode='wait'>
         {/* 用页面的 `page` 状态作为 `key` 确保每次切换页面时动画生效 */}
-        <AnimatedPage key={page}>
+        <AnimatedPage key={appConfig.index}>
           {renderPage()}
         </AnimatedPage>
       </AnimatePresence>
