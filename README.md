@@ -1,4 +1,6 @@
-# React + TypeScript + Vite
+# DAOKE-HOTEL-H5
+
+このプロジェクトは、オープンソースの民宿管理システムであり、民宿主に効率的で便利な物件管理ソリューションを提供することを目的としています。React.jsとNUTUIを使用して開発されており、運営の最適化と顧客体験の向上を希望する民宿主に適しています。
 
 ## Project List
 
@@ -31,4 +33,8 @@ Daoke-hetel-h5
 
 ## Project Screenshots
 
-[![pArrPTf.png](https://s21.ax1x.com/2024/11/03/pArrPTf.png)](https://imgse.com/i/pArrPTf)
+[![pArr3hF.png](https://s21.ax1x.com/2024/11/03/pArr3hF.png)](https://imgse.com/i/pArr3hF)
+
+[![pArrVpQ.png](https://s21.ax1x.com/2024/11/03/pArrVpQ.png)](https://imgse.com/i/pArrVpQ)
+
+[![pArrZlj.png](https://s21.ax1x.com/2024/11/03/pArrZlj.png)](https://imgse.com/i/pArrZlj)
